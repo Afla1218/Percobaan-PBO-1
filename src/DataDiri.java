@@ -19,29 +19,16 @@ public class DataDiri {
         LocalDate tanggalLahir2 = LocalDate.parse(tanggalLahir1, DateTimeFormatter.ISO_DATE);
 
         LocalDate tanggalSkrg = LocalDate.now();
-        Period selishUmur = Period.between(tanggalLahir2, tanggalSkrg);
-        int umur = selishUmur.getYears();
+        Period selisihUmur = Period.between(tanggalLahir2, tanggalSkrg);
+        int umurTahun = selisihUmur.getYears();
+        int umurBulan = selisihUmur.getMonths();
 
         System.out.println("Data Diri:");
         System.out.println("Nama: " + nama);
         System.out.println("Jenis Kelamin: " + jenisKelamin2);
         System.out.println("Tanggal Lahir: " + tanggalLahir2.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
-        System.out.println("Umur: " + umur + " Tahun");
+        System.out.println("Umur: " + umurTahun + " Tahun " + umurBulan + " Bulan");
 
         scan.close();
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
